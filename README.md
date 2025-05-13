@@ -9,8 +9,9 @@ How to install
 - python3 -m venv env
 - source env/bin/activate
 - pip install -r requirements.txt
-..............................................................................................
+
 EDIT Setting.py
+
 from pathlib import Path
 import os
 
@@ -35,4 +36,3 @@ DATABASES = {
 - docker compose run --rm backend sh -c "python manage.py makemigrations"
 or
 - docker compose exec backend python manage.py migrate
-....................................................................................
