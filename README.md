@@ -1,10 +1,11 @@
 # dockerizing-django
 How to install
 
+- git clone https://github.com/golfkornphisit/dockerizing-django.git
+- cd dockerizing-django
 - docker build .
 - docker compose build
 - docker compose run --rm backend sh -c "django-admin startproject backend ."
-- docker compose run --rm backend sh -c "python manage.py makemigrations"
 - python3 -m venv env
 - source env/bin/activate
 - pip install -r requirements.txt
@@ -38,5 +39,7 @@ DATABASES = {
 }
 
 - docker compose up --watch --build
-
+- docker compose run --rm backend sh -c "python manage.py makemigrations"
+or
+- docker compose exec backend python manage.py migrate
 ....................................................................................
