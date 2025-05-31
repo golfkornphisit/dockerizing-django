@@ -2,7 +2,6 @@ env
 .env
 .dockerignore
 backend
-README.md
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
