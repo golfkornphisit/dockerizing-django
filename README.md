@@ -37,7 +37,7 @@
     ```
 
 ---
-
+---
 ## Edit Setting.py
 
 ADD
@@ -65,7 +65,7 @@ DATABASES = {
          'PORT': os.getenv('DATABASE_PORT'),
     }
 }
-
+---
 ---
 ###RUN
     ```bash
