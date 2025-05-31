@@ -40,7 +40,6 @@
 
 ## Edit Setting.py
 ```
-ADD
 import os
 
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
@@ -60,7 +59,7 @@ DATABASES = {
     }
 }
 
-
+---
 ---
 ###RUN
 
