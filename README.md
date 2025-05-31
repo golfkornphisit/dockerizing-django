@@ -1,29 +1,47 @@
-git clone https://github.com/golfkornphisit/dockerizing-django.git       
-cd dockerizing-django
 
-Create folder "backend"
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/golfkornphisit/dockerizing-django.git 
+    ```
+2. **Change directory into the project:**
+    ```bash
+    cd dockerizing-django
+    ```
+3. **Copy the `env.example` file to `.env` and update the values as needed:**  
 
-RUN
-docker compose build
-docker compose run --rm backend sh -c "django-admin startproject backend ."
+   - **For Linux/macOS:**  
+     ```bash
+     cp env.example .env
+     ```
+   - **For Windows (Command Prompt):**  
+     ```cmd
+      Copy-Item -Path env.example -Destination .env
+     ```
 
-Create .env
+---
 
-DJANGO_SECRET_KEY=your_secret_key
-DEBUG=True
-DJANGO_LOGLEVEL=info
-DJANGO_ALLOWED_HOSTS=localhost
-DATABASE_ENGINE=postgresql_psycopg2
-DATABASE_NAME=dockerdjango
-DATABASE_USERNAME=dbuser
-DATABASE_PASSWORD=dbpassword
-DATABASE_HOST=db
-DATABASE_PORT=5432
-PGADMIN_MAIL=your@email.com
-PGADMIN_PW=changeit
+## Initial Setup ⚙️
 
-Edit settings.py
+### Development Prerequisites
+
+1. Create folder "backend"
+
+2. RUN
+
+    ```bash
+    docker compose build
+    ```
+
+    ```bash
+    docker compose run --rm backend sh -c "django-admin startproject backend ."
+    ```
+
+---
+
+## Edit Setting.py
+
 ADD
+
 import os
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -48,7 +66,17 @@ DATABASES = {
     }
 }
 
-RUN
-python3 -m venv env
-source env/bin/activate
-pip install -r docker/backend/requirements.txt
+---
+###RUN
+    ```bash
+    python3 -m venv env
+    ```
+
+    ```bash
+    source env/bin/activate
+    ```
+
+    ```bash
+    pip install -r docker/backend/requirements.txt
+    ```
+---
