@@ -37,22 +37,14 @@
     ```
 
 ---
----
+
 ## Edit Setting.py
----
+
 ADD
 
 import os
-
-# SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-q%hy#5z54pu$8r*vk($udfpp3%%s79y&pmy@&d4)8a+9_g2qi('
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
-
-# SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
 DEBUG = bool(os.environ.get("DEBUG", default=0))
-
-# ALLOWED_HOSTS = []
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS","127.0.0.1").split(",")
 ---
 ---
