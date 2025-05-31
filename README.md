@@ -82,4 +82,8 @@ DATABASES = {
     ```bash
     pip install -r docker/backend/requirements.txt
     ```
+
+    ```bash
+    docker-compose -f docker-compose.yml up --build -d
+    ```
 ---
