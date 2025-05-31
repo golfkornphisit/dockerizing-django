@@ -64,14 +64,9 @@ DATABASES = {
 ###RUN
 
     ```bash
-    python3 -m venv env
-    ```
-
-    ```bash
+    python3 -m venv env 
     source env/bin/activate
-    ```
-
-    ```bash
+    pip install -r docker/backend/requirements.txt
     docker-compose -f docker-compose.yml up --build -d
     ```
 
